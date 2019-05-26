@@ -13,13 +13,16 @@
 | github.com/nu7hatch/gouuid     | b027cb8b-62de-4ccd-697f-77778a532ebe    |	 1000000   |  1291  |     224  |          7  |
 | github.com/google/uuid         | 3b00cc3b-07ab-412d-9266-1c9e4aefb9f4    |	 2000000   |   884  |      64  |          2  |
 
+The above benchmark tests were ran on desktop computer
+
 ```
- *-memory
-      size: 15GiB
  *-cpu
       product: Intel(R) Core(TM) i3-4160 CPU @ 3.60GHz
       vendor: Intel Corp
       size: 3383MHz
       capacity: 3600MHz
       width: 64 bits
+     
+ *-memory
+      size: 15GiB
 ```
