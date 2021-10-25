@@ -17,6 +17,7 @@ import (
 	"github.com/kjk/betterguid"
 	"github.com/lithammer/shortuuid"
 	"github.com/lucsky/cuid"
+	"github.com/matoous/go-nanoid/v2"
 	"github.com/oklog/ulid"
 	"github.com/rs/xid"
 	"github.com/satori/go.uuid"
@@ -25,17 +26,18 @@ import (
 )
 
 func main() {
-	fmt.Printf("github.com/rs/xid:              %s\n", genXid())
-	fmt.Printf("github.com/segmentio/ksuid:     %s\n", genKsuid())
-	fmt.Printf("github.com/kjk/betterguid:      %s\n", genBetterGUID())
-	fmt.Printf("github.com/oklog/ulid:          %s\n", genUlid())
-	fmt.Printf("github.com/sony/sonyflake:      %x\n", genSonyflake())
-	fmt.Printf("github.com/chilts/sid:          %s\n", genSid())
-	fmt.Printf("github.com/lithammer/shortuuid: %s\n", genShortUUID())
-	fmt.Printf("github.com/satori/go.uuid:      %s\n", genUUIDv4())
-	fmt.Printf("github.com/nu7hatch/gouuid:     %s\n", genUUID1v4())
-	fmt.Printf("github.com/google/uuid:         %s\n", genUUID())
-	fmt.Printf("github.com/lucsky/cuid:         %s\n", genCUID())
+	fmt.Printf("github.com/rs/xid:               %s\n", genXid())
+	fmt.Printf("github.com/segmentio/ksuid:      %s\n", genKsuid())
+	fmt.Printf("github.com/kjk/betterguid:       %s\n", genBetterGUID())
+	fmt.Printf("github.com/oklog/ulid:           %s\n", genUlid())
+	fmt.Printf("github.com/sony/sonyflake:       %x\n", genSonyflake())
+	fmt.Printf("github.com/chilts/sid:           %s\n", genSid())
+	fmt.Printf("github.com/lithammer/shortuuid:  %s\n", genShortUUID())
+	fmt.Printf("github.com/satori/go.uuid:       %s\n", genUUIDv4())
+	fmt.Printf("github.com/nu7hatch/gouuid:      %s\n", genUUID1v4())
+	fmt.Printf("github.com/google/uuid:          %s\n", genUUID())
+	fmt.Printf("github.com/lucsky/cuid:          %s\n", genCUID())
+	fmt.Printf("github.com/matoous/go-nanoid/v2: %s\n", genNanoID())
 }
 
 func genXid() string {
@@ -95,6 +97,14 @@ func genUUID1v4() string {
 func genUUID() string {
 	id := guuid.New()
 	return id.String()
+}
+
+func genNanoID() string {
+	id, err := gonanoid.New()
+	if err != nil {
+		log.Fatalf("uuid.NewV4() failed with %s\n", err)
+	}
+	return id
 }
 
 func genCUID() string {
