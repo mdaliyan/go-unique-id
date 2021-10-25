@@ -6,15 +6,17 @@ package main
 
 import (
 	"fmt"
-	gouuid1 "github.com/nu7hatch/gouuid"
 	"log"
 	"math/rand"
 	"time"
+
+	gouuid1 "github.com/nu7hatch/gouuid"
 
 	"github.com/chilts/sid"
 	guuid "github.com/google/uuid"
 	"github.com/kjk/betterguid"
 	"github.com/lithammer/shortuuid"
+	"github.com/lucsky/cuid"
 	"github.com/oklog/ulid"
 	"github.com/rs/xid"
 	"github.com/satori/go.uuid"
@@ -33,6 +35,7 @@ func main() {
 	fmt.Printf("github.com/satori/go.uuid:      %s\n", genUUIDv4())
 	fmt.Printf("github.com/nu7hatch/gouuid:     %s\n", genUUID1v4())
 	fmt.Printf("github.com/google/uuid:         %s\n", genUUID())
+	fmt.Printf("github.com/lucsky/cuid:         %s\n", genCUID())
 }
 
 func genXid() string {
@@ -78,11 +81,7 @@ func genShortUUID() string {
 }
 
 func genUUIDv4() string {
-	id, err := uuid.NewV4()
-	if err != nil {
-		log.Fatalf("uuid.NewV4() failed with %s\n", err)
-	}
-	return id.String()
+	return uuid.NewV4().String()
 }
 
 func genUUID1v4() string {
@@ -96,4 +95,8 @@ func genUUID1v4() string {
 func genUUID() string {
 	id := guuid.New()
 	return id.String()
+}
+
+func genCUID() string {
+	return cuid.New()
 }

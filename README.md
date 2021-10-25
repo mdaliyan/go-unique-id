@@ -12,7 +12,7 @@
 | github.com/satori/go.uuid      | <sub>9ce723e4-5737-4e5b-a54a-e17086bf66d5<br>f4989905-508a-447e-9be4-3b44d5b14f1b<br>694b0805-23e6-4b70-89ee-b5735b59f90a</sub>    |	 <sub>2000000</sub>   |   886  |      64  |          2  |
 | github.com/nu7hatch/gouuid     | <sub>721f0f92-13a1-4eb6-6442-a12984f0a131<br>58dcddc6-21f2-451e-4035-7098300b8398<br>b2223556-d9b4-4fe4-4134-41b55bb3a399</sub>    |	 <sub>1000000</sub>   |  1291  |     224  |          7  |
 | github.com/google/uuid         | <sub>aa1fe2d6-7360-48ec-9c06-997f75664658<br>eea39318-5d61-450c-b867-e64f65fad0fa<br>d9d82f8a-7139-44a6-8702-b0c4c5424129</sub>    |	 <sub>2000000</sub>   |   884  |      64  |          2  |
-
+| github.com/lucsky/cuid         | <sub>ckv5z1nw800004uaqlegq4tns<br>ckv5z25bx00005vaqyr1wqb4h<br>ckv5z2lsn00006waqwc0b6qcv</sub> | <sub></sub> |   |   |   |
 
 The above benchmark tests were ran on desktop computer
 

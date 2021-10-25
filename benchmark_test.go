@@ -83,3 +83,11 @@ func BenchmarkGenUUID(b *testing.B) {
 		genUUID()
 	}
 }
+
+func BenchmarkGenCUID(b *testing.B) {
+	b.ReportAllocs()
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		genCUID()
+	}
+}
