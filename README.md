@@ -22,7 +22,7 @@ go test -bench=.
 | [lucsky/cuid](https://github.com/lucsky/cuid) | <sub>ckv5z1nw800004uaqlegq4tns<br>ckv5z25bx00005vaqyr1wqb4h<br>ckv5z2lsn00006waqwc0b6qcv</sub> | <sub>3193407</sub> | 398.3 | 55 | 4 |
 | [matoous/go-nanoid/v2](https://github.com/matoous/go-nanoid/v2) | <sub>4Oxn94IiH2RO10y7Rd6p4<br>BQKZ1qhr2ij52ACLGem_s<br>cfhM5t9ykJbu1_3xx8JP8</sub> | <sub>1206334</sub> | 910.0 | 144 | 3 |
 
-The above benchmark results are on
+The above benchmark results are for Go 1.17 on:
 
 ```
   MacBook Pro (13-inch, 2019, Two Thunderbolt 3 ports)
